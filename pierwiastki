@@ -1,0 +1,29 @@
+//WYLICZA I WYPISUJE PIERWIASTKI Z ROWNANIA KWARDATOWEGO
+#include <stdio.h>
+#include <math.h>
+
+void pierwiastki(double a, double b, double c) {
+double pierw;
+
+pierw=b*b-4*a*c;
+
+double x=(-b-sqrt(pierw))/2*a;
+double y=(-b+sqrt(pierw))/2*a;
+double z=(-b/2*a);
+
+if(pierw>0) printf("%lf\n%lf\n",x,y);
+else if(pierw=0) printf("%lf",z);
+else printf("brak pierwiastków\n");
+}
+void main() {
+        double a,b,c;
+printf("Podaj liczby a, b, c: \n");
+scanf("%lf",&a);
+scanf("%lf",&b);
+scanf("%lf",&c);
+pierwiastki(a,b,c);
+}
+
+
+
+
