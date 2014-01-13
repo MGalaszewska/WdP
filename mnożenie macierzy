@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+main()
+{
+int wiersz1,kol1,wiersz2,kol2,i,j,k;
+
+
+printf("Podaj rozmiar pierwszej macierzy:\n");
+scanf("%d%d",&wiersz1,&kol1);
+
+printf("Podaj rozmiar drugiej macierzy:\n");
+scanf("%d%d",&wiersz2,&kol2);
+
+int tab[wiersz1][kol1];
+int tab2[wiersz2][kol2];
+int wynik[wiersz1][kol2];
+
+if(kol1!=wiersz2) {printf("Jak Ty chcesz je pomnozyc?!\n");
+} else {
+
+printf("Podaj liczby do pierwszej macierzy\n");
+for(i=0; i<wiersz1; i++) {
+for(j=0; j<kol1; j++) {
+scanf("%d",&tab[i][j]); } }
+
+printf("Podaj liczby do drugiej macierzy\n");
+for(i=0; i<wiersz2; i++) {
+for(j=0; j<kol2; j++) {
+scanf("%d",&tab2[i][j]); } }
+
+for(i=0; i<wiersz1; i++) {
+        for(j=0; j<kol2; j++){
+                wynik[i][j]=0;
+                for(k=0; k<kol1; k++) {
+                wynik[i][j]=wynik[i][j]+(tab[i][k]*tab2[k][j]);
+                }
+        }
+}
+
+for(i=0; i<wiersz1; i++) {
+for(j=0; j<kol2; j++) {
+        printf("%3d",wynik[i][j]);
+        }printf("\n");
+                }
+
+        }
+}
