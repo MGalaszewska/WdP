@@ -1,0 +1,19 @@
+#include <stdio.h>
+//Program wyswietlajacy 4 pierwsze liczby doskonale
+main()
+{
+
+        int i,a=6,b=0,s;
+        while(b<4) {
+                s=1;
+                for(i=a-1; i>1; i=i-1) {
+                        if(a%i==0)
+                        s+=i;
+                }
+                if(s==a) {
+                printf("%d\n",a);
+                b=b+1;
+                }
+                a=a+1;
+        }
+}
